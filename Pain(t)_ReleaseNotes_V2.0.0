@@ -1,0 +1,41 @@
+Erik's Pain(t) Version 2.0.0 -  8/26/2020
+
+
+New features:
+  * Project ported over from Swing Library v1
+  * Menu Bar added through oracle documentation
+  * Added File Chooser (oracle)
+  * Synced File Chooser with Menu Bar
+  * Added File Open
+  * Added Image View
+  * File Chooser now displays image (cleaned up with oracle docs)
+  * Menu Bar has polite close option 
+  * Added File Saver and saveScene
+
+Known issues:
+  * Images stack up on each other
+  * Output has some strange run codes, might just be FX
+  * Could not find a good native FX way to save images
+  * until....https://docs.oracle.com/javafx/2/image_ops/jfxpub-image_ops.htm
+  * Buttons and Textfields like to stick around
+  * error messages need to be added
+
+Expected next sprint:
+  * Images that can have their pixels accessed
+  * Better Image View
+
+Links:
+  * Demo
+  * Github
+  * javatpoint.com
+  * https://docs.oracle.com/
+  
+* The software shall allow the user to view an image from a file.
+
+* The software shall allow the user to specify/choose the file to open.
+
+* The software shall have a menu bar.
+
+* The software shall allow the user to save the opened file.  
+
+* The software shall close politely (have a close button).
