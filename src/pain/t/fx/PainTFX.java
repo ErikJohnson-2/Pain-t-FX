@@ -8,8 +8,6 @@ package pain.t.fx;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-//import java.io.FileOutputStream;
-import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.application.Application;
@@ -26,7 +24,6 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.image.PixelReader;
-//import javafx.scene.image.PixelWriter;
 import javafx.scene.image.WritableImage;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
@@ -45,42 +42,9 @@ public class PainTFX extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-        Button btn = new Button();
-        btn.setText("Say 'Hello World'");
-        btn.setOnAction(new EventHandler<ActionEvent>() {
-
-            @Override
-            public void handle(ActionEvent event) {
-                System.out.println("Hello World!");
-            }
-        });
-
+        
         GridPane root = new GridPane();
         Scene scene = new Scene(root, 300, 250);
-        //VBox saveLayout = new VBox(20);
-        //Scene saveScene = new Scene(saveLayout, 300, 250);
-
-        
-        /*
-        
-        Button saveBtn = new Button();
-        saveBtn.setText("Click When Ready");
-        saveBtn.setOnAction(new EventHandler<ActionEvent>() {
-
-            @Override
-            public void handle(ActionEvent event) {
-                System.out.println("Hello World!");
-            }
-        });
-        TextField saveInput = new TextField();
-        saveInput.setText("Please Input Where Your New File Will Be Saved: C:\\\\Users\\\\MyName\\\\filename.txt");
-
-        saveLayout.getChildren().add(saveBtn);
-        saveLayout.getChildren().add(saveInput);
-*/
-        
-        
-        
         
         Menu menu1 = new Menu("File");
         Menu menu2 = new Menu("Would You Like To End The Pain Sir?");
@@ -116,7 +80,7 @@ public class PainTFX extends Application {
                     iv.setSmooth(true);
                     iv.setCache(true);
 
-                    //root.add(new ImageView(image), 0, 0);
+                    
                     root.add(iv, 3, 3);
                 } catch (FileNotFoundException ex) {
                     Logger.getLogger(PainTFX.class.getName()).log(Level.SEVERE, null, ex);
@@ -129,7 +93,6 @@ public class PainTFX extends Application {
             @Override
             public void handle(ActionEvent e) {
 
-                
                 
                 VBox saveLayout = new VBox(20);
                 Scene saveScene = new Scene(saveLayout, 300, 250);
@@ -156,16 +119,10 @@ public class PainTFX extends Application {
                 // Create WritableImage
                 WritableImage wImage = new WritableImage( pixelReader,
                         (int) image.getWidth(),
-                        (int) image.getHeight());
-                //PixelWriter pixelWriter = wImage.getPixelWriter();
+                        (int) image.getHeight()); 
 
                 // Write wImage to file system as a .png image
-                
 
-                //("C:\\Users\\MyName\\filename.txt")
-                
-                
-                
                 saveBtn.setOnAction(new EventHandler<ActionEvent>() {
 
                     @Override
@@ -185,8 +142,6 @@ public class PainTFX extends Application {
                         
                     }
                 });
-                
-               
             }
         });
 
@@ -197,7 +152,6 @@ public class PainTFX extends Application {
             }
         });
 
-        root.getChildren().add(btn);
         root.getChildren().add(menuBar);
 
         primaryStage.setTitle("Pain(t)");
